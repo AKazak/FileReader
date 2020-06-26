@@ -1,7 +1,6 @@
 {
     "name": "akazak/file-reader-extension",
     "description": "Extension to get specific info from file",
-    "type": "composer-plugin",
     "authors": [
         {
             "name": "AKazak",
@@ -16,8 +15,5 @@
         "psr-4": {
             "AKazak\\FileReader\\": "src/"
         }
-    },
-    "extra": {
-        "class": "AKazak\\FileReader"
     }
 }
