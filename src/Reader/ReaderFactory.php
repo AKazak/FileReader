@@ -1,9 +1,8 @@
 <?php
 
-namespace AKazak\FileReader\ReaderFactory;
+namespace AKazak\FileReader\Reader;
 
 use AKazak\FileReader\Exception\ExtensionNotSupportedException;
-use AKazak\FileReader\Reader\ReaderInterface;
 
 final class ReaderFactory
 {

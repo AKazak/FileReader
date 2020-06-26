@@ -4,7 +4,7 @@ namespace AKazak\FileReader;
 
 use AKazak\FileReader\Exception\ExtensionNotSupportedException;
 use AKazak\FileReader\Exception\FileNotFoundException;
-use AKazak\FileReader\ReaderFactory\ReaderFactory;
+use AKazak\FileReader\Reader\ReaderFactory;
 
 class Reader
 {
