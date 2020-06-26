@@ -1,6 +1,7 @@
 {
     "name": "akazak/file-reader-extension",
     "description": "Extension to get specific info from file",
+    "type": "package",
     "authors": [
         {
             "name": "AKazak",
