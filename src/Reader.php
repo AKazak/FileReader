@@ -4,7 +4,7 @@ namespace AKazak\FileReader;
 
 use AKazak\FileReader\Exception\ExtensionNotSupportedException;
 use AKazak\FileReader\Exception\FileNotFoundException;
-use AKazak\FileReader\Reader\ReaderInterface;
+use AKazak\FileReader\ReaderFactory\ReaderFactory;
 
 class Reader
 {
@@ -24,7 +24,7 @@ class Reader
 
         $ext = $this->getFileExtension($filePath);
 
-        $reader = $this->getReaderByFileExt($ext);
+        $reader = ReaderFactory::factory($ext);
 
         return $reader->getInfo($filePath, $fieldNames);
     }
@@ -36,20 +36,5 @@ class Reader
     protected function getFileExtension(string $filePath): string
     {
         return pathinfo($filePath, PATHINFO_EXTENSION);
-    }
-
-    /**
-     * @param string $ext
-     * @return ReaderInterface
-     *
-     * @throws ExtensionNotSupportedException
-     */
-    protected function getReaderByFileExt(string $ext): ReaderInterface
-    {
-        $className = '\AKazak\FileReader\Reader\\' . ucfirst($ext) . 'Reader';
-        if (!class_exists($className)) {
-            throw new ExtensionNotSupportedException('Not supported extension');
-        }
-        return new $className();
     }
 }
