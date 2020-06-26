@@ -16,5 +16,8 @@
         "psr-4": {
             "AKazak\\FileReader\\": "src/"
         }
+    },
+    "extra": {
+        "class": "AKazak\\FileReader"
     }
 }
