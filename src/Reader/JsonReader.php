@@ -42,7 +42,7 @@ class JsonReader implements ReaderInterface
      * @param array $fields
      * @return array
      */
-    protected function processEntity(array $entity, array $fields)
+    protected function processEntity(array $entity, array $fields): array
     {
         $result = [];
         foreach ($fields as $field) {
